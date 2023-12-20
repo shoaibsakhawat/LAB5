@@ -206,11 +206,22 @@ c = 123;
     numPassed++;
   }
 
-  
+
    printf("TESTING: max(%d,%d,%d): ", x, y, z);
   result = max(x, y, z);
   if(result != 40) {
     printf("FAILED: max returned %d, expected 40\n", result);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+  printf("TESTING: max(%d,%d,%d): ", z, z, z);
+  result = max(z, z, z);
+  if(result != 45) {
+    printf("FAILED: max returned %d, expected 45\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
