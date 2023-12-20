@@ -193,6 +193,23 @@ int main(int argc, char **argv) {
   //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
   //       for at least 6 and a total of at least 20
 
+
+c = 123;
+  expectedD = 0.5;
+  printf("TESTING: rgbIntToFloat(%d): ", c);
+  actualD = rgbIntToFloat(c);
+  if(!isClose(expectedD, actualD)) {
+    printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+
+
+
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
