@@ -32,9 +32,6 @@ int toGrayScaleAverage(int r, int g, int b) {
   return (r + g + b) / 3;
 }
 
-
-
-
 int toGrayScaleLightness(int red,int green,int blue)
 {
   return(max(red,green,blue)+min(red,green,blue))/2;
@@ -43,4 +40,12 @@ int toGrayScaleLuminosity(int red,int green,int blue)
 {
   return (int)(0.21*red+0.72*green+0.07*blue);//using (int) for rounding of!!
 }
-
+int toSepiaRed(int red,int green,int blue)
+{
+  int SepiaRed=(int)(0.393*red+0.769*green+0.189*blue);
+  if(SepiaRed>=255)
+  {
+    return 255;
+  }
+  return SepiaRed;
+}
