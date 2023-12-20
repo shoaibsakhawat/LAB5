@@ -57,3 +57,13 @@ int toSepiaGreen(int red,int green,int blue)
     return 255;
   }
   return SepiaGreen;
+}
+int toSepiaBlue(int red,int green,int blue)
+{
+  int SepiaBlue=(int)(0.272*red+0.534*green+0.131*blue);
+  if(SepiaBlue>=255)
+  {
+    return 255;
+  }
+  return SepiaBlue;
+}
