@@ -256,6 +256,22 @@ c = 123;
 
 
 
+    r = 255, g = 0, b = 0;
+  expectedResult = 100;
+  printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
+  result = toSepiaRed(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+
+
+
 
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
